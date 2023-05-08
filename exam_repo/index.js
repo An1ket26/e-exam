@@ -106,7 +106,7 @@ app.get("/api/file/:filename",(req,res,next)=>{
 
 mongoose
   .connect(
-    `mongodb+srv://aniket:chotu@cluster0.x6e7vlw.mongodb.net/exam?retryWrites=true&w=majority`,
+    process.env.DATABASE,
   )
   .then(() => {
     app.listen(5000);
